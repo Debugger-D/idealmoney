@@ -2,8 +2,8 @@
   <div class="panel">
     <div class="panel-heading bk-bg-primary">
       <i class="el-icon-menu"></i><span class="break"></span>数据列表
-      <div class="panel-actions" >
-        <a href="javascript:"><i class="el-icon-plus"></i> </a>&nbsp; 新增
+      <div class="panel-actions" @click="add">
+       <i class="el-icon-plus"></i>&nbsp; 新增
       </div>
     </div>
     <div class="panel-body">
@@ -35,14 +35,37 @@
           <template slot-scope="scope">
             <el-button
               size="small"
-              @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+              @click="edit(scope.$index, scope.row)">编辑</el-button>
             <el-button
               size="small"
               type="danger"
-              @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+              @click="delete(scope.$index, scope.row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
+      <el-dialog title="虚拟币信息" v-model="dialogFormVisible">
+        <el-form :model="selectTable">
+          <el-form-item label="虚拟币名称" label-width="100px">
+            <el-input v-model="selectTable.name" auto-complete="off"></el-input>
+          </el-form-item>
+          <el-form-item label="平台名称" label-width="100px">
+            <el-select
+              :options="categoryOptions"
+              v-model="selectTable.platName"
+            ></el-select>
+          </el-form-item>
+          <el-form-item label="虚拟币发放有效期" label-width="100px">
+            <el-input v-model="selectTable.date"></el-input>
+          </el-form-item>
+          <el-form-item label="虚拟币说明" label-width="100px">
+            <el-input type="textarea" v-model="selectTable.desc"></el-input>
+          </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
+          <el-button type="primary" @click="confirm">确 定</el-button>
+        </div>
+      </el-dialog>
     </div>
   </div>
 </template>
@@ -51,14 +74,33 @@
     data () {
       return {
         msg: 'hello vue',
+        dialogFormVisible: true,
+        selectTable: {},
+        categoryOptions: {},
         tableData: [
           {
             id: 123,
             name: '外部优惠券',
             platName: '2334sef',
+            desc: '呵呵',
             date: '2017-12-12 :23-23'
           }
         ]
+      }
+    },
+    methods: {
+      add () {
+        console.log('add')
+        this.selectTable = {}
+        this.dialogFormVisible = true;
+      },
+      confirm () {
+        console.log('confirm')
+      },
+      edit (index, data) {
+        console.log(index, data)
+        this.selectTable = data
+        this.dialogFormVisible = true
       }
     }
   }
