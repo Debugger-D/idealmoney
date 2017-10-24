@@ -74,9 +74,10 @@
     data () {
       return {
         msg: 'hello vue',
-        dialogFormVisible: true,
+        dialogFormVisible: false,
         selectTable: {},
         categoryOptions: {},
+        modalType: 2, // 1: 新增; 2: 编辑;
         tableData: [
           {
             id: 123,
@@ -91,14 +92,17 @@
     methods: {
       add () {
         console.log('add')
-        this.selectTable = {}
+        this.modalType = 1;
+        this.selectTable = {};
         this.dialogFormVisible = true;
       },
       confirm () {
-        console.log('confirm')
+        console.log(this.modalType)
+        this.dialogFormVisible = false;
       },
       edit (index, data) {
         console.log(index, data)
+        this.modalType = 2;
         this.selectTable = data
         this.dialogFormVisible = true
       }
