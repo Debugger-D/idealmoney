@@ -105,7 +105,7 @@
         ],
         formInline: {
           region: {},
-          startTime: 'Tue Oct 24 2017 14:34:48 GMT+0800',
+          startTime: '',
           endTime: '',
           user: ''
         }

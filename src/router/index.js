@@ -28,17 +28,17 @@ const record = r => require.ensure([], () => r(require('@/page/record')), 'recor
 /**
  * 交易汇总
  */
-const summary = r => require.ensure([], () => r(require('@/page/record')), 'summary')
+const summary = r => require.ensure([], () => r(require('@/page/summary')), 'summary')
 
 /**
  * 交易流水
  */
-const flow = r => require.ensure([], () => r(require('@/page/record')), 'flow')
+const flow = r => require.ensure([], () => r(require('@/page/flow')), 'flow')
 
 /**
  * 异常处理
  */
-const handle = r => require.ensure([], () => r(require('@/page/record')), 'handle')
+const handle = r => require.ensure([], () => r(require('@/page/handle')), 'handle')
 
 const routes = [
   {
