@@ -95,7 +95,6 @@
     },
     methods: {
       downLoad () {
-        console.log('add')
         this.modalType = 1;
         this.selectTable = {};
         this.dialogFormVisible = true;

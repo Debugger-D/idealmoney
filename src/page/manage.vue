@@ -91,17 +91,14 @@
     },
     methods: {
       add () {
-        console.log('add')
         this.modalType = 1;
         this.selectTable = {};
         this.dialogFormVisible = true;
       },
       confirm () {
-        console.log(this.modalType)
         this.dialogFormVisible = false;
       },
       edit (index, data) {
-        console.log(index, data)
         this.modalType = 2;
         this.selectTable = data
         this.dialogFormVisible = true
