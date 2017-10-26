@@ -42,7 +42,6 @@ module.exports = {
       },
       //积分商城
       '/api/v1/credit/': {
-        // target: 'http://10.200.4.116:8082/score/',
         target: 'http://10.200.131.47/score/',
         changeOrigin: true,
         pathRewrite: {
