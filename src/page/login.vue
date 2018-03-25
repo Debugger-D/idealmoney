@@ -1,5 +1,5 @@
 <template>
-  <div class="login_page fillcontain">
+  <!-- <div class="login_page fillcontain">
     <transition name="form-fade" mode="in-out">
       <section class="form_contianer">
         <div class="manage_tip">
@@ -19,13 +19,18 @@
         <p class="error">{{errorData}}</p>
       </section>
     </transition>
+  </div> -->
+  <div>
+    <v-input type="text">
   </div>
 </template>
 
 <script>
 import { login } from '@/api/api'
 import methods from '@/service/methods'
+import vInput from '@/components/vInput'
 export default{
+  components:{vInput},
   data () {
     return {
       projectName: '虚拟货币发放后台',
