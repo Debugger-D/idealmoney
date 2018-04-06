@@ -38,4 +38,5 @@ axios.interceptors.response.use(function (response) {
     Router.push({path: '/login'})
     return Promise.reject(error.response.data.error);
   }
+  return Promise.reject(error.response.data.error);
 });
