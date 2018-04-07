@@ -95,9 +95,9 @@
             type: 1213,
             name: '外部优惠券',
             number: 456,
-            remark: '你好好啊',
+            remark: '你好啊',
             date: '2017-12-12 :23-23',
-            platName: '2334sef'
+            platName: '2334f'
           }
         ],
         formInline: {
