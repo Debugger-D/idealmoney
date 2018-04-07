@@ -97,7 +97,7 @@
             number: 456,
             remark: '你好啊',
             date: '2017-12-12 :23-23',
-            platName: '2334f'
+            platName: '2334sef'
           }
         ],
         formInline: {
