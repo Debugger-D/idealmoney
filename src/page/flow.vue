@@ -88,12 +88,11 @@
   export default{
     data () {
       return {
-        msg: 'hello vue',
         selectTable: {},
         categoryOptions: {},
         tableData: [
           {
-            type: 123,
+            type: 1213,
             name: '外部优惠券',
             number: 456,
             remark: '你好好啊',
