@@ -31,7 +31,7 @@ axios.interceptors.response.use(function (response) {
   return response.data;
 }, function (error) {
   if (error.response.status === 403) {
-    logout();//先退出登录
+    //logout();//先退出登录
     Router.push({path: '/login'})
     return Promise.reject(error.response.data.error);
   } else if (error.response.status === 401) {
