@@ -27,16 +27,16 @@ export const login = data => axios.post(accountapi + 'user/login', qs.stringify(
 export const logout = data => axios.post(accountapi + 'user/logout')
 
 /** HTTP拦截器 */
-axios.interceptors.response.use(function (response) {
-  return response.data;
-}, function (error) {
-  if (error.response.status === 403) {
-    logout();//先退出登录
-    Router.push({path: '/login'})
-    return Promise.reject(error.response.data.error);
-  } else if (error.response.status === 401) {
-    Router.push({path: '/login'})
-    return Promise.reject(error.response.data.error);
-  }
-  return Promise.reject(error.response.data.error);
-});
+// axios.interceptors.response.use(function (response) {
+//   return response.data;
+// }, function (error) {
+//   if (error.response.status === 403) {
+//     logout();//先退出登录
+//     Router.push({path: '/login'})
+//     return Promise.reject(error.response.data.error);
+//   } else if (error.response.status === 401) {
+//     Router.push({path: '/login'})
+//     return Promise.reject(error.response.data.error);
+//   }
+//   return Promise.reject(error.response.data.error);
+// });
