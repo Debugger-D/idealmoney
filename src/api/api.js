@@ -16,7 +16,7 @@ const accountapi = '/account/'
 
 export const login = data => axios.post(accountapi + 'user/login', qs.stringify(data), {
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Type': 'application/json',
   }
 })
 
