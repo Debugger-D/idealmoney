@@ -1,6 +1,6 @@
 # ideal_money
 
-### 使用vue+element搭建的一个虚拟货币后台管理系统
+### 使用vue+element搭建的一个虚拟货币后台管理系统.
 > virtual currency
 
 ## Build Setup
