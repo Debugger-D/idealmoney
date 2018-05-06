@@ -54,7 +54,7 @@
               v-model="selectTable.platName"
             ></el-select>
           </el-form-item>
-          <el-form-item label="虚拟币发放有效期" label-width="100px">
+          <el-form-item label="虚拟币有效期" label-width="100px">
             <el-input v-model="selectTable.date"></el-input>
           </el-form-item>
           <el-form-item label="虚拟币说明" label-width="100px">
