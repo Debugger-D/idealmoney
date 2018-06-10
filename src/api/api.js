@@ -30,13 +30,10 @@ export const logout = data => axios.post(accountapi + 'user/logout')
 axios.interceptors.response.use(function (response) {
   return response.data;
 }, function (error) {
-  if (error.response.status === 403) {
+  const status = error.response.status;
+  if (status === 403 || status === 401) {
     logout();//先退出登录
     Router.push({path: '/login'})
-    return Promise.reject(error.response.data.error);
-  } else if (error.response.status === 401) {
-    Router.push({path: '/login'})
-    return Promise.reject(error.response.data.error);
-  }
+  } 
   return Promise.reject(error.response.data.error);
 });
