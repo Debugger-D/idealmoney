@@ -8,9 +8,7 @@
   export default {
     props:[val],
     data () {
-      return {
-        phone: ''
-      }
+      return {}
     },
     computed: {
      
