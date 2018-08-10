@@ -23,7 +23,7 @@
         <div class="header_container">
           <el-breadcrumb separator="/">
             <el-breadcrumb-item :to="{ path: '/manage' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item v-for="(item, index) in $route.name" key="index">{{item}}</el-breadcrumb-item>
+            <el-breadcrumb-item v-for="(item, index) in $route.name" :key="index">{{item}}</el-breadcrumb-item>
           </el-breadcrumb>
           <el-dropdown @command="handleCommand" menu-align='start'>
             <span class="phone">{{phone}} <i class="el-icon-caret-bottom"></i></span>
